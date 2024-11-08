@@ -1,10 +1,19 @@
 import { Check, Trash } from "@phosphor-icons/react"
-import { useContext } from "react"
+import { useContext, useState } from "react"
+
 
 
 function App() {
-  useContext()
+  const TodoContext = createContext()
+  const listaContexto =useContext(TodoContext)
+  
+  const TodoProvider = ({children}) => {
+    const [listaTarefa,setLista] = useState([
+      {id:'', titulo:'', concluida: false }
 
+    ])
+  
+  }
   return (
     <div 
       className="
